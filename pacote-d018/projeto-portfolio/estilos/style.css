@@ -189,9 +189,55 @@ article#video .video-container {
   color: var(--destaque-inverso);
   font-size: 1.1em;
 }
-
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+.projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition:
+    border-color 0.5s,
+    border-width 0.5s;
+}
+.projeto img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+.projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+  #projeto-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .projeto-info {
+    max-width: 80%;
+  }
+  #projeto-container img {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
   }
 }
