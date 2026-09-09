@@ -244,4 +244,16 @@ footer {
     max-width: 20%;
     max-height: 200px;
   }
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+  #ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+  #detalhes {
+    grid-column: 3 / 4;
+  }
 }
